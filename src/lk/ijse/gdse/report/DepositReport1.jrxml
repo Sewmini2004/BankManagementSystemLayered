@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DepositReport1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="960360ae-e62c-47e2-a831-348a719d40b3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DemoFx  Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT bankmanagementsystem.saving_account.`saving_Account_No`,
+	bankmanagementsystem.deposit_transactions.`deposit_Id`,
+	bankmanagementsystem.deposit_transactions.amount,
+	bankmanagementsystem.deposit_transactions.date,
+	bankmanagementsystem.deposit_transactions.time,
+	bankmanagementsystem.saving_account.`saving_Balance`
+FROM bankmanagementsystem.deposit_transactions
+	INNER JOIN bankmanagementsystem.saving_account ON 
+	 bankmanagementsystem.deposit_transactions.`saving_Account_No` = bankmanagementsystem.saving_account.`saving_Account_No`]]>
+	</queryString>
+	<field name="saving_Account_No" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="saving_Account_No"/>
+		<property name="com.jaspersoft.studio.field.label" value="saving_Account_No"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="deposit_Id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="deposit_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="deposit_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_transactions"/>
+	</field>
+	<field name="amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_transactions"/>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="date"/>
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_transactions"/>
+	</field>
+	<field name="time" class="java.sql.Time">
+		<property name="com.jaspersoft.studio.field.name" value="time"/>
+		<property name="com.jaspersoft.studio.field.label" value="time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deposit_transactions"/>
+	</field>
+	<field name="saving_Balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="saving_Balance"/>
+		<property name="com.jaspersoft.studio.field.label" value="saving_Balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="60" y="10" width="410" height="30" uuid="429d29e2-cbcb-4967-af44-6783454011be"/>
+				<text><![CDATA[      **********  Bank Management System in BOC Bank Mathugama Branch  **********]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="288" splitType="Stretch">
+			<textField>
+				<reportElement x="270" y="10" width="100" height="30" uuid="e72afaa4-f852-4e53-b682-a63cba2e8e15">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a3ffec92-460c-47b0-80ba-6a9e984164b0"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{saving_Account_No}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="140" y="9" width="100" height="30" uuid="9d6ad5d2-ad80-4c56-a3dc-03a221e8e797">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a3ffec92-460c-47b0-80ba-6a9e984164b0"/>
+				</reportElement>
+				<text><![CDATA[Account Number]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="270" y="40" width="100" height="30" uuid="aa332c80-6d2a-4d43-a50a-18e8b4da8436">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2d983228-7ffc-4f25-a3e6-8b86ec504afe"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{deposit_Id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="140" y="39" width="100" height="30" uuid="3f00e2f0-c0d5-40af-b0bd-5c7e2121310a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2d983228-7ffc-4f25-a3e6-8b86ec504afe"/>
+				</reportElement>
+				<text><![CDATA[Deposit ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="270" y="70" width="100" height="30" uuid="5db92e10-e345-4427-88f8-3265ab4cccbc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2391282-2929-4e4a-8744-c2e6b08760a6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="140" y="69" width="100" height="30" uuid="9e598d72-ccf7-463e-8a45-c1349cca5515">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2391282-2929-4e4a-8744-c2e6b08760a6"/>
+				</reportElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="151" y="145" width="100" height="30" uuid="54b62749-8f94-4b60-bcae-bb8bf14334ea"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="51" y="145" width="100" height="30" uuid="1f2949cb-ae5f-4605-8884-5c2986ceef59"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="145" width="100" height="30" uuid="614a1520-0169-4ba1-b22e-c3a7fb125276"/>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="145" width="100" height="30" uuid="fcc98472-6af6-4abf-affe-5c20d99918a3"/>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="270" y="100" width="100" height="30" uuid="1245a074-f7f8-46c4-ab9a-27c28cee67fa"/>
+				<textFieldExpression><![CDATA[$F{saving_Balance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="140" y="100" width="100" height="30" uuid="68eda011-f52b-4bb6-8bdd-b2c019fb5b82"/>
+				<text><![CDATA[Total Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="250" width="313" height="30" uuid="d3feba34-85ab-49e1-b115-fcacb3460879"/>
+				<text><![CDATA[  *********        Thanks for using Bank System  !!!!!      *********]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="228" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

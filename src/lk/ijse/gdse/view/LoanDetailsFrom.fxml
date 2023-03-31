@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="795.0" prefWidth="1217.0" style="-fx-background-color: #192a56;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.LoanDetailsFromController">
+   <children>
+      <Accordion layoutX="101.0" layoutY="118.0" />
+      <TableView fx:id="tblLoan" layoutX="77.0" layoutY="135.0" prefHeight="578.0" prefWidth="1067.0" style="-fx-background-color: white;">
+        <columns>
+          <TableColumn fx:id="colLoanId" prefWidth="99.0" text="loan_Id" />
+          <TableColumn fx:id="colInstAmount" prefWidth="126.0" text="inst_Amount" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" text=" " />
+            <TableColumn fx:id="colNoInst" prefWidth="135.0" text="no_Of_Installment" />
+            <TableColumn fx:id="colDate" prefWidth="105.0" text="Date" />
+            <TableColumn fx:id="colTime" prefWidth="94.0" text="time" />
+            <TableColumn fx:id="colSavingNo" minWidth="4.0" prefWidth="115.0" text="Saving Acc No" />
+            <TableColumn fx:id="colValue" minWidth="4.0" prefWidth="91.0" text="Value" />
+            <TableColumn fx:id="colInterest" minWidth="4.0" prefWidth="70.0" text="interest" />
+            <TableColumn fx:id="colBalance" minWidth="4.0" prefWidth="97.0" text="Balance" />
+            <TableColumn fx:id="colTotal" minWidth="4.0" prefWidth="93.0" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="47.0" layoutY="39.0" prefHeight="57.0" prefWidth="1129.0" style="-fx-background-color: #6D214F;" text="                                       View Loan Details" textFill="WHITE">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

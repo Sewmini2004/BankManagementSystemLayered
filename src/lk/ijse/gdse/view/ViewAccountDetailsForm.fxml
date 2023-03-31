@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.ViewAccountDetailsFormController">
+   <children>
+      <AnchorPane layoutX="-3.0" prefHeight="845.0" prefWidth="1173.0" style="-fx-background-color: #192a56;">
+         <children>
+            <Accordion layoutX="101.0" layoutY="118.0" />
+            <TableView fx:id="tblAccount" layoutX="27.0" layoutY="134.0" prefHeight="595.0" prefWidth="1118.0" style="-fx-background-color: white;">
+               <columns>
+                  <TableColumn fx:id="colMember_Id" prefWidth="94.0" text="member_Id" />
+                  <TableColumn fx:id="colSavingAcc" prefWidth="118.0" text="Saving Acc No" />
+                  <TableColumn fx:id="colName" prefWidth="103.0" text="name" />
+                  <TableColumn fx:id="colNic" prefWidth="90.0" text="nic" />
+                  <TableColumn fx:id="colBalance" prefWidth="98.0" text="Blannce" />
+                  <TableColumn fx:id="colAddress" prefWidth="114.0" text="address" />
+                  <TableColumn fx:id="colMobile" prefWidth="115.0" text="mobile" />
+                  <TableColumn fx:id="colEmail" prefWidth="90.0" text="email" />
+                  <TableColumn fx:id="colBday" prefWidth="116.0" text=" birthday" />
+                  <TableColumn fx:id="coldate" prefWidth="95.0" text=" Date" />
+                  <TableColumn fx:id="colTime" prefWidth="88.0" text="Time" />
+                  <TableColumn prefWidth="103.0" text="name" />
+               </columns>
+            </TableView>
+            <Label layoutX="68.0" layoutY="41.0" prefHeight="57.0" prefWidth="1046.0" style="-fx-background-color: #6D214F;" text="                               View Account Details" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

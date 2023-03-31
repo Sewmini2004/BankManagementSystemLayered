@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="896.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.ViewCustomerDetailsController">
+   <children>
+      <AnchorPane prefHeight="896.0" prefWidth="1213.0" style="-fx-background-color: #192a56;">
+         <children>
+            <Accordion layoutX="101.0" layoutY="118.0" />
+            <TableView fx:id="tblLoanDeposit" layoutX="83.0" layoutY="136.0" prefHeight="632.0" prefWidth="1016.0" style="-fx-background-color: white;">
+               <columns>
+                  <TableColumn fx:id="coldepositloanId" prefWidth="117.99996948242188" text="deposit loan Id" />
+                  <TableColumn fx:id="coldepositLoanamount" prefWidth="165.0" text="deposit_Loan_amount" />
+                  <TableColumn fx:id="colloanId" prefWidth="186.0" text="loan_Id" />
+                  <TableColumn fx:id="colDate" prefWidth="218.0" text="date" />
+                  <TableColumn fx:id="colTime" prefWidth="113.0" text="time" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Label layoutX="73.0" layoutY="39.0" prefHeight="57.0" prefWidth="1050.0" style="-fx-background-color: #6D214F;" text="                       View Loan Deposit Details" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

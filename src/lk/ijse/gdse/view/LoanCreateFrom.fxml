@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1212.0" style="-fx-background-color: #192a56;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.LoanCreateFromController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfcfc" height="661.0" layoutX="33.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" width="1089.0" />
+      <Label layoutX="31.0" layoutY="16.0" prefHeight="65.0" prefWidth="1089.0" style="-fx-background-color: #8e44ad;" text="                                        Loan Create From " textFill="#0a0505">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAdd" layoutX="95.0" layoutY="760.0" onAction="#btnAddOnAction" prefHeight="65.0" prefWidth="294.0" style="-fx-background-color: #faefcc; -fx-background-radius: 20 20 20 20;" text="Create Loan" textFill="#1e1515">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel1" layoutX="868.0" layoutY="760.0" onAction="#btnCancelOnAction" prefHeight="65.0" prefWidth="260.0" style="-fx-background-color: #9aaebe; -fx-background-radius: 20 20 20 20;" text="Cancel" textFill="#1e1515">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fbfdff" height="362.0" layoutX="65.0" layoutY="104.0" stroke="BLACK" strokeType="INSIDE" width="1014.0" />
+      <Label layoutX="137.0" layoutY="127.0" prefHeight="21.0" prefWidth="88.0" text="Loan ID">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="648.0" layoutY="303.0" prefHeight="65.0" prefWidth="121.0" text="Installment Amount" wrapText="true">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="134.0" layoutY="303.0" prefHeight="65.0" prefWidth="121.0" text="No Of Installment " wrapText="true">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="636.0" layoutY="127.0" text="Date Of Loan">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="181.0" text="Saving Account No">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="640.0" layoutY="221.0" text="Total Amount">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="395.0" prefHeight="31.0" prefWidth="115.0" text="Interest">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="243.0" text=" Loan Value">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLoanId" layoutX="372.0" layoutY="117.0" prefHeight="41.0" prefWidth="177.0" />
+      <Label fx:id="lblInstallmentAmount" layoutX="869.0" layoutY="310.0" prefHeight="49.0" prefWidth="177.0" />
+      <JFXComboBox fx:id="CmbNoOfInstallment" layoutX="377.0" layoutY="303.0" prefHeight="31.0" prefWidth="176.0" />
+      <Label fx:id="lblDate" layoutX="856.0" layoutY="122.0" prefHeight="41.0" prefWidth="176.0" />
+      <JFXTextField fx:id="txtAccNo" layoutX="376.0" layoutY="172.0" onAction="#txtAccNoOnAction" />
+      <JFXTextField fx:id="txtInterest" layoutX="377.0" layoutY="376.0" onAction="#txtInterestOnAction" prefHeight="41.0" prefWidth="176.0" />
+      <JFXComboBox fx:id="cmbLoanValue" layoutX="377.0" layoutY="236.0" onAction="#cmbLoanValueOnAction" prefHeight="31.0" prefWidth="176.0" />
+      <Label layoutX="651.0" layoutY="398.0" text="Loan Balance ">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLoanBalance" layoutX="868.0" layoutY="375.0" prefHeight="57.0" prefWidth="198.0" textFill="#941515">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="285.0" layoutY="410.0" onAction="#btnChangeOnAction" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: #9aaebe;" text="Change">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXButton>
+      <Label fx:id="lblTotal" layoutX="855.0" layoutY="212.0" prefHeight="49.0" prefWidth="204.0" />
+      <TableView fx:id="tblLoan" layoutX="66.0" layoutY="479.0" prefHeight="253.0" prefWidth="1014.0" style="-fx-background-color: white;">
+         <columns>
+            <TableColumn fx:id="colLoanId" prefWidth="99.0" text="loan_Id" />
+            <TableColumn fx:id="colInstAmount" prefWidth="126.0" text="inst_Amount" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" text=" " />
+            <TableColumn fx:id="colNoInst" prefWidth="135.0" text="no_Of_Installment" />
+            <TableColumn fx:id="colDate" prefWidth="105.0" text="Date" />
+            <TableColumn fx:id="colTime" prefWidth="94.0" text="time" />
+            <TableColumn fx:id="colSavingNo" minWidth="4.0" prefWidth="115.0" text="Saving Acc No" />
+            <TableColumn fx:id="colValue" minWidth="4.0" prefWidth="91.0" text="Value" />
+            <TableColumn fx:id="colInterest" minWidth="4.0" prefWidth="70.0" text="interest" />
+            <TableColumn fx:id="colBalance" minWidth="4.0" prefWidth="97.0" text="Balance" />
+            <TableColumn fx:id="colTotal" minWidth="4.0" prefWidth="93.0" text="Total" />
+         </columns>
+      </TableView>
+      <Separator layoutX="63.0" layoutY="731.0" prefHeight="7.0" prefWidth="1023.0" style="-fx-background-color: black;" />
+      <Separator layoutX="63.0" layoutY="476.0" prefHeight="7.0" prefWidth="1023.0" style="-fx-background-color: black;" />
+      <Separator layoutX="63.0" layoutY="482.0" orientation="VERTICAL" prefHeight="253.0" prefWidth="6.0" style="-fx-background-color: black;" />
+      <Separator layoutX="1083.0" layoutY="482.0" orientation="VERTICAL" prefHeight="253.0" prefWidth="6.0" style="-fx-background-color: black;" />
+      <Separator layoutX="71.0" layoutY="101.0" prefHeight="7.0" prefWidth="1014.0" style="-fx-background-color: black;" />
+      <Separator layoutX="66.0" layoutY="459.0" prefHeight="7.0" prefWidth="1014.0" style="-fx-background-color: black;" />
+      <Separator layoutX="66.0" layoutY="103.0" orientation="VERTICAL" prefHeight="362.0" prefWidth="6.0" style="-fx-background-color: black;" />
+      <Separator layoutX="1077.0" layoutY="93.0" orientation="VERTICAL" prefHeight="376.0" prefWidth="6.0" style="-fx-background-color: black;" />
+      <JFXButton fx:id="btnClear" layoutX="516.0" layoutY="760.0" onAction="#btnClearOnAction" prefHeight="65.0" prefWidth="248.0" style="-fx-background-color: #9aaebe; -fx-background-radius: 20 20 20 20;" text="Clear">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="52.0" fitWidth="55.0" layoutX="526.0" layoutY="767.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img_6.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="55.0" layoutX="889.0" layoutY="767.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/img_5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="67.0" layoutX="104.0" layoutY="767.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/img_2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="781.0" prefWidth="1183.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.ViewWithdrowFromController">
+   <children>
+      <AnchorPane prefHeight="781.0" prefWidth="1183.0" style="-fx-background-color: #192a56;">
+         <children>
+            <Accordion layoutX="101.0" layoutY="118.0" />
+            <TableView fx:id="tblWithdraw" layoutX="111.0" layoutY="124.0" prefHeight="578.0" prefWidth="948.0" style="-fx-background-color: white;">
+               <columns>
+                  <TableColumn fx:id="colwithdrowId" prefWidth="154.0" text="withdrow_Id" />
+                  <TableColumn fx:id="colamount" prefWidth="155.0" text="amount" />
+                  <TableColumn fx:id="colDate" prefWidth="135.0" text="date" />
+                  <TableColumn fx:id="coltime" prefWidth="172.0" text=" time" />
+                  <TableColumn fx:id="colsavingAccountNo" prefWidth="137.0" text="saving_Account_No" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Label layoutX="68.0" layoutY="39.0" prefHeight="57.0" prefWidth="1076.0" style="-fx-background-color: #6D214F;" text="                             View Withdraw Details" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

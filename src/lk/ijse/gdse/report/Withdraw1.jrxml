@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="43796492-dad5-43b8-8c6a-0781ad8f4656">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[YmFua21hbmFnZW1lbnRzeXN0ZW0uc2F2aW5nX2FjY291bnQgQVMgLDMxNCwxMDAsZTZlOTdjNTct
+YWQ5Mi00OGQyLWFmMjctZDI0OWQ2M2M2MGMwO2JhbmttYW5hZ2VtZW50c3lzdGVtLndpdGhkcmF3
+YWxfbWVtYmVyIEFTICw2OCwyNSw3YWI1ODEyNi1mMTUwLTQyMmEtYTJkOS1jZGE1MzU0ZmUzODc7]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DemoFx  Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT bankmanagementsystem.withdrawal_member.`withdraw_Id`,
+	bankmanagementsystem.withdrawal_member.amount,
+	bankmanagementsystem.withdrawal_member.date,
+	bankmanagementsystem.withdrawal_member.time,
+	bankmanagementsystem.saving_account.`saving_Account_No`,
+	bankmanagementsystem.saving_account.`saving_Balance`
+FROM bankmanagementsystem.withdrawal_member
+	INNER JOIN bankmanagementsystem.saving_account ON 
+	 bankmanagementsystem.withdrawal_member.`saving_Account_No` = bankmanagementsystem.saving_account.`saving_Account_No`]]>
+	</queryString>
+	<field name="withdraw_Id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="withdraw_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="withdraw_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="withdrawal_member"/>
+	</field>
+	<field name="amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="withdrawal_member"/>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="date"/>
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="withdrawal_member"/>
+	</field>
+	<field name="time" class="java.sql.Time">
+		<property name="com.jaspersoft.studio.field.name" value="time"/>
+		<property name="com.jaspersoft.studio.field.label" value="time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="withdrawal_member"/>
+	</field>
+	<field name="saving_Account_No" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="saving_Account_No"/>
+		<property name="com.jaspersoft.studio.field.label" value="saving_Account_No"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<field name="saving_Balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="saving_Balance"/>
+		<property name="com.jaspersoft.studio.field.label" value="saving_Balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="saving_account"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="85" splitType="Stretch">
+			<staticText>
+				<reportElement x="72" y="0" width="410" height="39" uuid="0f000920-4e61-4540-836c-686e0469c53d"/>
+				<text><![CDATA[      **********  Bank Management System in BOC Bank Mathugama Branch  **********]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="39" width="250" height="38" uuid="338e667c-04c0-43ce-8514-195ac395ca44"/>
+				<text><![CDATA[               Customer Withdrow Report. ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="258" splitType="Stretch">
+			<staticText>
+				<reportElement x="120" y="210" width="313" height="39" uuid="927f1e43-8eba-405e-bb1d-2f3355088b42"/>
+				<text><![CDATA[  *********        Thanks for using Bank System  !!!!!      *********]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="302" y="10" width="100" height="30" uuid="89bc54bc-3f03-429d-8ff4-9362bbd4ce7f"/>
+				<textFieldExpression><![CDATA[$F{saving_Account_No}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="152" y="10" width="100" height="30" uuid="3989f379-c8cf-46ef-938a-af52a49fa3e5"/>
+				<text><![CDATA[saving_Account_No  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="302" y="40" width="100" height="30" uuid="d8b600ec-e206-4d24-a01d-fc9ee585884d"/>
+				<textFieldExpression><![CDATA[$F{withdraw_Id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="152" y="40" width="100" height="30" uuid="c8b6bf52-feb5-450f-b292-1c30c1323ff2"/>
+				<text><![CDATA[withdraw_Id    :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="302" y="70" width="100" height="30" uuid="17f894e7-aebb-426f-acec-74d657b20466"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="152" y="70" width="100" height="30" uuid="54a66d2f-830b-4e33-8cf5-aec22f1368e5"/>
+				<text><![CDATA[amount              :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="302" y="100" width="100" height="30" uuid="35cdb9c8-82db-4417-942f-39649a2106cb"/>
+				<textFieldExpression><![CDATA[$F{saving_Balance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="152" y="100" width="100" height="30" uuid="96b2daf6-254e-4d29-91c7-a482ae8231ae"/>
+				<text><![CDATA[saving_Balance         :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="150" width="100" height="30" uuid="fb55c8bf-af67-45f2-ad46-c28c1ce50349"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="150" width="70" height="30" uuid="52e932d3-aaa5-4d89-a216-b07dc264a849"/>
+				<text><![CDATA[date         :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="150" width="100" height="30" uuid="4bd95309-8f71-4b29-9842-65055cbfaf5b"/>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="150" width="80" height="30" uuid="ca744c30-d7b7-4988-bbd1-baf3c4f5b898"/>
+				<text><![CDATA[time]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane fx:id="pane2" prefHeight="923.0" prefWidth="1290.0" style="-fx-background-color: #c2ced8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.DashBoardFormController">
+   <children>
+      <MenuBar fx:id="menuBar" layoutX="24.0" layoutY="7.0" prefHeight="49.0" prefWidth="1180.0" styleClass="text" stylesheets="@../assets/logo/style.css">
+        <menus>
+          <Menu fx:id="memuAccount" mnemonicParsing="false" onAction="#memuAccountOnAction" text="    Account">
+            <items>
+                  <MenuItem fx:id="MenuItemSavingAcc" mnemonicParsing="false" onAction="#MenuItemSavingAccOnAction" style="-fx-background-color: #9aaebe;" text="Saving Account" />
+              <MenuItem fx:id="MenuItemChildAcc" mnemonicParsing="false" onAction="#MenuItemChildAccOnAction" style="-fx-background-color: #9aaebe;" text="Child Account" />
+                  <MenuItem fx:id="menuItemChildGuardian" mnemonicParsing="false" onAction="#menuItemChildGuardianOnAction" style="-fx-background-color: #9aaebe;" text=" Child Guardian Details" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuTransaction" mnemonicParsing="false" onAction="#menuTransactionOnAction" text="                  Transaction">
+            <items>
+              <MenuItem fx:id="MenuItemDeposit" mnemonicParsing="false" onAction="#MenuItemDepositOnAction" style="-fx-background-color: #9aaebe;" text="              Deposit" />
+                  <MenuItem fx:id="menuItemWithdraw" mnemonicParsing="false" onAction="#menuItemWithdrawOnAction" style="-fx-background-color: #9aaebe;" text="              Withdrow" />
+                  <MenuItem fx:id="menuItemChildDeposit" mnemonicParsing="false" onAction="#menuItemChildDepositOnAction" style="-fx-background-color: #9aaebe;" text="              Child Deposit" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuTransfer" mnemonicParsing="false" onAction="#menuTransferOnAction" text="                   Transfer">
+            <items>
+              <MenuItem fx:id="menuItemAcctoAcc" mnemonicParsing="false" onAction="#menuItemAcctoAccONAction" style="-fx-background-color: #9aaebe;" text="              Account to Account" />
+            </items>
+          </Menu>
+            <Menu fx:id="menuReport" mnemonicParsing="false" onAction="#menuReportOnAction" text="                    Report">
+              <items>
+                <MenuItem fx:id="menuItemViewCustomerDetails" mnemonicParsing="false" onAction="#menuItemViewDetailsCustomerOnAction" style="-fx-background-color: #9aaebe;" text="              View Loan  Deposit Details" />
+                <MenuItem fx:id="menuItemViewAccountDetails" mnemonicParsing="false" onAction="#menuItemViewAccountDetailsOnAction" style="-fx-background-color: #9aaebe;" text="              View Account Details" />
+                  <MenuItem fx:id="menuItemViewDeposit" mnemonicParsing="false" onAction="#menuItemViewDepositOnAction" style="-fx-background-color: #9aaebe;" text="              View Deposit" />
+                  <MenuItem fx:id="menuItemViewLoan" mnemonicParsing="false" onAction="#menuItemViewLoanOnAction" style="-fx-background-color: #9aaebe;" text="              View Loan" />
+                  <MenuItem fx:id="menuItemViewWithdrow" mnemonicParsing="false" onAction="#menuItemViewWithdrowOnAction" style="-fx-background-color: #9aaebe;" text="              View Withdrow" />
+                  <MenuItem fx:id="menuWorkersDetails" mnemonicParsing="false" onAction="#menuWorkersDetailsOnAction" style="-fx-background-color: #9aaebe;" text="              View Workers Details" />
+              </items>
+            </Menu>
+            <Menu fx:id="menuLoan" mnemonicParsing="false" onAction="#menuLoanOnAction" text="                    Loan">
+              <items>
+                  <MenuItem fx:id="menuItemCreateLoan" mnemonicParsing="false" onAction="#menuItemCreateLoanOnAction" style="-fx-background-color: #9aaebe;" text="              Create Loan" />
+                  <MenuItem fx:id="menuItemDepositLoan" mnemonicParsing="false" onAction="#menuItemDepositLoanOnAction" style="-fx-background-color: #9aaebe;" text="              Deposit Loan" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="                     Worker">
+              <items>
+                <MenuItem fx:id="menuWorkerDetails" mnemonicParsing="false" onAction="#menuWorkerDetailsOnAction" style="-fx-background-color: #9aaebe;" text="              Worker Details" />
+              </items>
+            </Menu>
+        </menus>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MenuBar>
+      <AnchorPane fx:id="dashboardContext" layoutX="22.0" layoutY="65.0" prefHeight="851.0" prefWidth="1141.0">
+         <children>
+            <Text layoutX="355.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="314.6708984375" />
+         </children></AnchorPane>
+      <JFXButton fx:id="btnExit" layoutX="1123.0" layoutY="835.0" onAction="#btnExitlOnAction" prefHeight="65.0" prefWidth="155.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 20 20 20 20;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="-3.0" layoutY="3.0" orientation="VERTICAL" prefHeight="933.0" prefWidth="1.0" style="-fx-background-color: black;" />
+      <Separator layoutX="1287.0" orientation="VERTICAL" prefHeight="936.0" prefWidth="6.0" style="-fx-background-color: black;" />
+      <Separator layoutX="-4.0" layoutY="-6.0" prefHeight="10.0" prefWidth="1293.0" style="-fx-background-color: black;" />
+      <Separator layoutX="-4.0" layoutY="931.0" prefHeight="10.0" prefWidth="1293.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>
