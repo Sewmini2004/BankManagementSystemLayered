@@ -42,6 +42,7 @@ public class DaoFactory {
             case DEPOSIT_LOAN_AMOUNT:
                 return (T) new DepositLoanAmountDAOImple();
             case INTER_ACCOUNT_TRANSACTION:
+
                 return (T) new InterAccountTransactionDAOImple();
             case LOAN:
                 return (T) new LoanDAOImple();

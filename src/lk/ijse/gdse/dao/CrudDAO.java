@@ -4,7 +4,6 @@ import lk.ijse.gdse.entity.SuperEntity;
 
 import java.sql.SQLException;
 import java.util.List;
-
 public interface CrudDAO<T extends SuperEntity> extends SuperDAO{
     public List<T> getAll() throws SQLException, ClassNotFoundException;
     public boolean add(T obj) throws SQLException, ClassNotFoundException;

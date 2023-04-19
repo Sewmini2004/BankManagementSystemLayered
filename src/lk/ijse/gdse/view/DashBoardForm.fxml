@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+
 <AnchorPane fx:id="pane2" prefHeight="923.0" prefWidth="1290.0" style="-fx-background-color: #c2ced8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.DashBoardFormController">
    <children>
       <MenuBar fx:id="menuBar" layoutX="24.0" layoutY="7.0" prefHeight="49.0" prefWidth="1180.0" styleClass="text" stylesheets="@../assets/logo/style.css">

@@ -51,7 +51,6 @@ public class BranchDAOImple implements BranchDAO {
 
     @Override
     public ArrayList<Branch> getAll() throws SQLException, ClassNotFoundException {
-
         ResultSet resultSet = DBUtil.executeQuery("SELECT * FROM branch");
          ArrayList<Branch> arrayList=new ArrayList<>();
         while (resultSet.next()){

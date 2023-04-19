@@ -50,7 +50,7 @@ public class ViewWithdrowFromController {
                 withdrow.getDate(),
                 withdrow.getTime(),
                 withdrow.getSaving_Account_No()
-//mokk ar mru wenw kwwe
+
 
         )).collect(Collectors.toList());
         tblWithdraw.setItems(FXCollections.observableArrayList(withdrowList));
