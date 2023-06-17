@@ -133,7 +133,6 @@ public class DepositChildController {
                         } else {
                             DBConnection.getInstance().getConnection().rollback();
                         }
-                        //ko manika dn kyla dunnu ewa hri hri inno mn baluwe eek krl iwr krd kiyl hri ek exeprion eken blnna
                     } else {
                         DBConnection.getInstance().getConnection().rollback();
                     }

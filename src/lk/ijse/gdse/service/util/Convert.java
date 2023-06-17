@@ -5,10 +5,6 @@ import lk.ijse.gdse.entity.*;
 
 public class Convert {
 
-    //mek threnodaq manika oo methnin api entity ekak DTO krnnai DTO ekk entity krnnai method tk  wenna hridaha
-
-    //from kyla ptan gnn ewgene entity DTO wlata convert krno hrida
-    //to kyla ptan gnn ewagen entity wlta convert krno thrunda oy 2?ooo
 
     // from______    entity -> DTO
     //to______       DTO   -> entity

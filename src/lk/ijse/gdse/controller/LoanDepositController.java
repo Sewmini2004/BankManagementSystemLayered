@@ -157,6 +157,7 @@ public class LoanDepositController {
 
         try {
             String loanId = txtLoanId.getText();
+            //methana awlk ekam index eka enne
             double loan_balance = loanBO.getAllLoanDetailes().get(0).getLoan_Balance();
             boolean isAvailable = loanBO.searchLoanPk(loanId);
 

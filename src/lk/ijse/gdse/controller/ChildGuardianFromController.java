@@ -81,7 +81,7 @@ public class ChildGuardianFromController {
             boolean matchesNic = Pattern.compile("^([0-9]{9}[x|X|v|V]|[0-9]{12})$").matcher(txtNic.getText()).matches();
             boolean matchesAddress = Pattern.compile("^[a-zA-Z0-9\\\\s,.'-]+[a-zA-Z0-9\\\\s,.'-]+[a-zA-Z0-9\\\\s,.'-]+$").matcher(txtAddress.getText()).matches();
             boolean matchesMobile = Pattern.compile("^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$").matcher(txtMobile.getText()).matches();
-            boolean matchesEmail = Pattern.compile("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$").matcher(txtEmail.getText()).matches();
+            boolean matchesEmail = Pattern.compile("").matcher(txtEmail.getText()).matches();
             boolean matchesDob = Pattern.compile("^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$").matcher(txtDateOfBirth.getText()).matches();
 
 

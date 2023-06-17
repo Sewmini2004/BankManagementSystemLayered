@@ -8,7 +8,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-//methn namee ctrl ekth ekk click krla ynn pluwm manika em ynna e class ekta
 public interface ChildAccountBO extends SuperBO {
     public boolean addChild(Child_AccountDTO childAccountDTO) throws SQLException, ClassNotFoundException;
     public boolean deleteChild(String accountNo) throws SQLException, ClassNotFoundException;

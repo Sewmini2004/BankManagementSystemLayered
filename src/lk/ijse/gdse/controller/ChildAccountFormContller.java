@@ -32,7 +32,7 @@ public class ChildAccountFormContller {
 
     @FXML
     private Label lblAccNo;
-    //manika opy krla argena athi fxml file ekdi  scene builder ekedi ewaq oy
+
     @FXML
     private JFXTextField txtName;
 
